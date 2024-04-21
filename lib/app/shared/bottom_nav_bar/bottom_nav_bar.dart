@@ -1,6 +1,7 @@
 import 'package:daleel_store/app/features/home/presentation/view/home_view.dart';
 import 'package:daleel_store/app/shared/bottom_nav_bar/cubit/navbar_cubit.dart';
-import 'package:daleel_store/app/shared/bottom_nav_bar/dot_bottom_nav_bar.dart';
+import 'package:daleel_store/app/shared/bottom_nav_bar/widgets/dot_bottom_nav_bar.dart';
+import 'package:daleel_store/app/shared/drawer/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -10,6 +11,8 @@ class BottomNavBar extends StatefulWidget {
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
 }
+
+final GlobalKey<ScaffoldState> drawerKey = GlobalKey();
 
 class _BottomNavBarState extends State<BottomNavBar> {
   List<Widget> views = [
@@ -22,12 +25,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<NavbarCubit, NavbarState>(
-      listener: (context, state) {},
+    return BlocBuilder<NavbarCubit, NavbarState>(
       builder: (context, state) {
         var cubit = NavbarCubit.get(context);
 
         return Scaffold(
+          key: drawerKey,
           resizeToAvoidBottomInset: false,
           bottomNavigationBar: DotBottomNavBar(
             onChange: (index) {
@@ -51,6 +54,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             ],
           ),
           extendBody: true,
+          drawer: const AppDrawer(),
           body: views.elementAt(cubit.currentIndex),
         );
       },

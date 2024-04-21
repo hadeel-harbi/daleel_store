@@ -3,8 +3,9 @@ import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:daleel_store/app/core/utils/svg_icon.dart';
 import 'package:daleel_store/app/features/home/domin/models/product_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
-class ProductCard extends StatelessWidget {
+class ProductCard extends StatefulWidget {
   const ProductCard({
     super.key,
     required this.product,
@@ -14,6 +15,13 @@ class ProductCard extends StatelessWidget {
   final Product product;
   final bool? discount;
   final bool? pionts;
+
+  @override
+  State<ProductCard> createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
+  bool inCart = false;
 
   @override
   Widget build(BuildContext context) {
@@ -38,17 +46,18 @@ class ProductCard extends StatelessWidget {
         children: [
           Container(
             height: 144,
+            width: AppSpaces.screenWidth(context) * 0.6,
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
             ),
             child: Image.asset(
-              product.image ?? "",
+              widget.product.image ?? "",
               fit: BoxFit.cover,
             ),
           ),
           AppSpaces.height16,
-          Text(product.name ?? "",
+          Text(widget.product.name ?? "",
               overflow: TextOverflow.ellipsis,
               style: Theme.of(context)
                   .textTheme
@@ -74,7 +83,7 @@ class ProductCard extends StatelessWidget {
             ],
           ),
           AppSpaces.height8,
-          pionts!
+          widget.pionts!
               ? Container(
                   height: 30,
                   padding:
@@ -115,7 +124,7 @@ class ProductCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text(product.price ?? "",
+                        Text(widget.product.price ?? "",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyMedium
@@ -123,7 +132,7 @@ class ProductCard extends StatelessWidget {
                                     color: AppColors.secondaryGreen,
                                     fontWeight: FontWeight.w600)),
                         AppSpaces.width8,
-                        Text(discount! ? "50.99" : "",
+                        Text(widget.discount! ? "50.99" : "",
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyMedium
@@ -140,29 +149,72 @@ class ProductCard extends StatelessWidget {
                       children: [
                         Flexible(
                           flex: 2,
-                          child: Container(
-                            height: 30,
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 12, vertical: 6),
-                            decoration: BoxDecoration(
-                                color: AppColors.secondaryRed,
-                                borderRadius: BorderRadius.circular(17)),
-                            child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "أضف للسلة",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                IconSvg(
-                                  "assets/icons/cart.svg",
-                                  color: AppColors.light,
-                                )
-                              ],
+                          child: InkWell(
+                            onTap: () {
+                              setState(() {
+                                inCart = !inCart;
+                              });
+                            },
+                            child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 300),
+                              height: 32,
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 6),
+                              decoration: BoxDecoration(
+                                  color: inCart
+                                      ? AppColors.light
+                                      : AppColors.secondaryRed,
+                                  borderRadius: BorderRadius.circular(17),
+                                  border: Border.all(
+                                      color: AppColors.secondaryRed,
+                                      width: 1.5)),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  inCart
+                                      ? const Text(
+                                          "في السلة",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: AppColors.secondaryRed,
+                                          ),
+                                        ).animate().fadeIn()
+                                      : const Text(
+                                          "أضف للسلة",
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                            color: AppColors.light,
+                                          ),
+                                        ).animate().fadeIn(
+                                          delay: const Duration(
+                                              milliseconds: 100)),
+                                  inCart
+                                      ? Container(
+                                          padding: const EdgeInsets.all(2),
+                                          margin:
+                                              const EdgeInsetsDirectional.only(
+                                                  end: 5),
+                                          decoration: const BoxDecoration(
+                                              color: AppColors.secondaryRed,
+                                              shape: BoxShape.circle),
+                                          child: const Icon(
+                                            Icons.check,
+                                            color: Colors.white,
+                                            size: 11,
+                                          ),
+                                        ).animate().slideY(begin: 0.5)
+                                      : const IconSvg(
+                                          "assets/icons/cart.svg",
+                                          color: AppColors.light,
+                                        ).animate().slideY(
+                                          begin: -0.4,
+                                          delay:
+                                              const Duration(milliseconds: 100))
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -170,7 +222,7 @@ class ProductCard extends StatelessWidget {
                         Flexible(
                           flex: 1,
                           child: Container(
-                            height: 30,
+                            height: 32,
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 6),
                             decoration: BoxDecoration(

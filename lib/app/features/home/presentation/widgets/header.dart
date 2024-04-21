@@ -2,6 +2,7 @@ import 'package:daleel_store/app/core/constants/colors.dart';
 import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:daleel_store/app/core/utils/svg_icon.dart';
 import 'package:daleel_store/app/features/home/presentation/widgets/icon_with_badge.dart';
+import 'package:daleel_store/app/shared/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -17,9 +18,12 @@ class Header extends StatelessWidget {
         children: [
           Row(
             children: [
-              const IconSvg(
-                "assets/icons/menu.svg",
-                size: 18,
+              InkWell(
+                onTap: () => drawerKey.currentState!.openDrawer(),
+                child: const IconSvg(
+                  "assets/icons/menu.svg",
+                  size: 18,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),

@@ -13,7 +13,7 @@ import 'package:daleel_store/app/features/home/presentation/widgets/item_contain
 import 'package:daleel_store/app/features/home/presentation/widgets/products_list_view.dart';
 import 'package:daleel_store/app/features/home/presentation/widgets/text_field.dart';
 import 'package:daleel_store/app/features/home/presentation/widgets/title_row.dart';
-import 'package:daleel_store/app/shared/widgets/view_padding.dart';
+import 'package:daleel_store/app/shared/shared_widgets/view_padding.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatefulWidget {
