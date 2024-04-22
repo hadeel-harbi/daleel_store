@@ -12,9 +12,10 @@ class PartnerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSpaces.screenWidth(context) * 0.65,
+      width: AppSpaces.screenWidth(context) * 0.6,
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsetsDirectional.only(end: 14),
+      constraints: const BoxConstraints(maxWidth: 300),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: Colors.white,

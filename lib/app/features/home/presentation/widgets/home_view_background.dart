@@ -22,31 +22,29 @@ class HomeViewBackground extends StatelessWidget {
               const SizedBox(
                 height: 144,
               ),
-              ClipRRect(
+              Container(
+                width: AppSpaces.screenWidth(context),
                 clipBehavior: Clip.antiAlias,
-                borderRadius:
-                    const BorderRadius.vertical(top: Radius.circular(40)),
-                child: Container(
-                  width: AppSpaces.screenWidth(context),
-                  decoration: BoxDecoration(
-                    color: AppColors.light,
-                    boxShadow: [
-                      BoxShadow(
-                          color: AppColors.black.withOpacity(0.07),
-                          blurRadius: 12,
-                          spreadRadius: 5,
-                          offset: const Offset(0, -2))
-                    ],
-                  ),
-                  child: Stack(
-                    children: [
-                      // background
-                      Image.asset("assets/images/background-blured.png"),
-                      Column(
-                        children: children,
-                      )
-                    ],
-                  ),
+                decoration: BoxDecoration(
+                  color: AppColors.light,
+                  borderRadius:
+                      const BorderRadius.vertical(top: Radius.circular(40)),
+                  boxShadow: [
+                    BoxShadow(
+                        color: AppColors.black.withOpacity(0.07),
+                        blurRadius: 12,
+                        spreadRadius: 5,
+                        offset: const Offset(0, -2))
+                  ],
+                ),
+                child: Stack(
+                  children: [
+                    // background
+                    Image.asset("assets/images/background-blured.png"),
+                    Column(
+                      children: children,
+                    )
+                  ],
                 ),
               )
             ],

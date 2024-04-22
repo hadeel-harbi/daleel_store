@@ -26,9 +26,10 @@ class _ProductCardState extends State<ProductCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSpaces.screenWidth(context) * 0.65,
+      width: AppSpaces.screenWidth(context) * 0.6,
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsetsDirectional.only(end: 14),
+      constraints: const BoxConstraints(maxWidth: 300),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: Colors.white,
@@ -46,7 +47,7 @@ class _ProductCardState extends State<ProductCard> {
         children: [
           Container(
             height: 144,
-            width: AppSpaces.screenWidth(context) * 0.6,
+            width: AppSpaces.screenWidth(context) * 0.55,
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -148,7 +149,7 @@ class _ProductCardState extends State<ProductCard> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Flexible(
-                          flex: 2,
+                          flex: 3,
                           child: InkWell(
                             onTap: () {
                               setState(() {
@@ -220,7 +221,7 @@ class _ProductCardState extends State<ProductCard> {
                         ),
                         AppSpaces.width8,
                         Flexible(
-                          flex: 1,
+                          flex: 2,
                           child: Container(
                             height: 32,
                             padding: const EdgeInsets.symmetric(
@@ -234,7 +235,7 @@ class _ProductCardState extends State<ProductCard> {
                                 IconSvg(
                                   "assets/icons/apple.svg",
                                   color: AppColors.light,
-                                  size: 16,
+                                  size: 14,
                                 ),
                                 Text(
                                   "Pay",

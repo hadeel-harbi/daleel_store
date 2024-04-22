@@ -57,7 +57,7 @@ class _LightDarkSwitchState extends State<LightDarkSwitch> {
                       .animate()
                       .fadeIn()
                       .rotate(duration: const Duration(milliseconds: 600))
-                      .slideX(begin: -1.2),
+                      .slideX(begin: -1),
                 )
               : Align(
                   alignment: Alignment.centerLeft,
@@ -76,8 +76,8 @@ class _LightDarkSwitchState extends State<LightDarkSwitch> {
                       .animate()
                       .fadeIn()
                       .rotate(
-                          begin: 0.2,
-                          end: -0.2,
+                          begin: 0.1,
+                          end: -0.1,
                           delay: const Duration(milliseconds: 50),
                           duration: const Duration(milliseconds: 300))
                       .slideX(begin: 1),

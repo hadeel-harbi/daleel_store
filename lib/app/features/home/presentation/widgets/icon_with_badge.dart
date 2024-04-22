@@ -17,6 +17,7 @@ class IconWithBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return badges.Badge(
+      showBadge: badgeCount > 0,
       badgeContent: Text(
         '$badgeCount',
         style: const TextStyle(
@@ -29,7 +30,10 @@ class IconWithBadge extends StatelessWidget {
           borderSide: const BorderSide(color: AppColors.light)),
       child: Container(
         padding: const EdgeInsets.all(4),
-        decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+        decoration: BoxDecoration(
+            color: color,
+            shape: BoxShape.circle,
+            border: Border.all(color: AppColors.grey)),
         child: IconSvg(
           icon,
           color: AppColors.light,

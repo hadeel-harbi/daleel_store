@@ -22,7 +22,7 @@ class Header extends StatelessWidget {
                 onTap: () => drawerKey.currentState!.openDrawer(),
                 child: const IconSvg(
                   "assets/icons/menu.svg",
-                  size: 18,
+                  size: 14,
                 ),
               ),
               Padding(

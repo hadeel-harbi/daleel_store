@@ -19,8 +19,8 @@ class DrawerListItem extends StatelessWidget {
       title: Text(
         text,
         style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-            color: text != "تسجيل الخروج" ? AppColors.dark : AppColors.error,
-            fontWeight: FontWeight.w500),
+              color: text != "تسجيل الخروج" ? AppColors.dark : AppColors.error,
+            ),
       ),
       leading: IconSvg(
         icon,
