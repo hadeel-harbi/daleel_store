@@ -1,14 +1,16 @@
+import 'package:daleel_store/app/core/constants/images.dart';
+
 List storesList = [
   {
-    "image": "assets/images/COD.png",
+    "image": AppImages.cod,
   },
   {
-    "image": "assets/images/UEFA.png",
+    "image": AppImages.ufea,
   },
   {
-    "image": "assets/images/iTunes.png",
+    "image": AppImages.iTunes,
   },
   {
-    "image": "assets/images/Playstation.png",
+    "image": AppImages.playstation,
   },
 ];

@@ -1,10 +1,5 @@
-import 'package:daleel_store/app/features/home/presentation/view/home_view.dart';
-import 'package:daleel_store/app/features/wallet/presentation/view/wallet_view.dart';
-import 'package:daleel_store/app/shared/bottom_nav_bar/cubit/navbar_cubit.dart';
-import 'package:daleel_store/app/shared/bottom_nav_bar/widgets/dot_bottom_nav_bar.dart';
-import 'package:daleel_store/app/shared/drawer/app_drawer.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:daleel_store/app/core/utils/exports.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});

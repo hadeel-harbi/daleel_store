@@ -1,4 +1,5 @@
 import 'package:daleel_store/app/core/constants/colors.dart';
+import 'package:daleel_store/app/core/constants/images.dart';
 import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +15,7 @@ class HomeViewBackground extends StatelessWidget {
     return Stack(
       children: [
         // festive image
-        Image.asset("assets/images/Frame.png",
-            width: AppSpaces.screenWidth(context)),
+        Image.asset(AppImages.motherDay, width: AppSpaces.screenWidth(context)),
         SingleChildScrollView(
           child: Column(
             children: [
@@ -40,7 +40,7 @@ class HomeViewBackground extends StatelessWidget {
                 child: Stack(
                   children: [
                     // background
-                    Image.asset("assets/images/background-blured.png"),
+                    Image.asset(AppImages.backgroundBlured),
                     Column(
                       children: children,
                     )

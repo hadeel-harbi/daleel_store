@@ -1,3 +1,4 @@
+import 'package:daleel_store/app/core/constants/icons.dart';
 import 'package:daleel_store/app/features/home/presentation/widgets/category_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -16,23 +17,23 @@ class CategoriesRow extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             CategoryWidget(
-              icon: "assets/icons/platforms.svg",
+              icon: AppIcons.platforms,
               text: "منصات الشراء",
             ),
             CategoryWidget(
-              icon: "assets/icons/stores.svg",
+              icon: AppIcons.stores,
               text: "متاجر رقمية",
             ),
             CategoryWidget(
-              icon: "assets/icons/gaming.svg",
+              icon: AppIcons.gaming,
               text: "منصات الألعاب",
             ),
             CategoryWidget(
-              icon: "assets/icons/shopping.svg",
+              icon: AppIcons.shopping,
               text: "التسوق",
             ),
             CategoryWidget(
-              icon: "assets/icons/data.svg",
+              icon: AppIcons.data,
               text: "الاتصال والبيانات",
             ),
           ],

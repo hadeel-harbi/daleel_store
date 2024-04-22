@@ -1,3 +1,4 @@
+import 'package:daleel_store/app/core/constants/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,7 +19,7 @@ class SliderCubit extends Cubit<SliderState> {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Image.asset(
-        "assets/images/gift-card.png",
+        AppImages.giftCard,
         fit: BoxFit.cover,
       ),
     ),

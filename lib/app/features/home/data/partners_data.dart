@@ -1,14 +1,16 @@
+import 'package:daleel_store/app/core/constants/images.dart';
+
 List partnersList = [
   {
-    "image": "assets/images/shop-logo-1.png",
+    "image": AppImages.shop1,
   },
   {
-    "image": "assets/images/shop-logo-2.png",
+    "image": AppImages.shop2,
   },
   {
-    "image": "assets/images/shop-logo-1.png",
+    "image": AppImages.shop1,
   },
   {
-    "image": "assets/images/shop-logo-2.png",
+    "image": AppImages.shop2,
   },
 ];

@@ -1,4 +1,5 @@
 import 'package:daleel_store/app/core/constants/colors.dart';
+import 'package:daleel_store/app/core/constants/icons.dart';
 import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:daleel_store/app/core/utils/svg_icon.dart';
 import 'package:flutter/material.dart';
@@ -60,8 +61,8 @@ class BalanceCard extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  const IconSvg(
-                    "assets/icons/add_circle.svg",
+                  IconSvg(
+                    AppIcons.addCircle,
                     color: AppColors.light,
                     size: 20,
                   ),
@@ -81,7 +82,7 @@ class BalanceCard extends StatelessWidget {
               Column(
                 children: [
                   const IconSvg(
-                    "assets/icons/gift.svg",
+                    AppIcons.gift,
                     color: AppColors.light,
                     size: 20,
                   ),
@@ -104,7 +105,7 @@ class BalanceCard extends StatelessWidget {
               Column(
                 children: [
                   const IconSvg(
-                    "assets/icons/income.svg",
+                    AppIcons.income,
                     color: AppColors.light,
                     size: 20,
                   ),

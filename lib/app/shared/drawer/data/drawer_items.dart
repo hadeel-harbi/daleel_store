@@ -1,34 +1,36 @@
+import 'package:daleel_store/app/core/constants/icons.dart';
+
 List drawerItems = [
   {
     "text": "سلتي",
-    "icon": "assets/icons/cart.svg",
+    "icon": AppIcons.cart,
   },
   {
     "text": "الطلبات السابقة",
-    "icon": "assets/icons/list.svg",
+    "icon": AppIcons.list,
   },
   {
     "text": "عن دليل ستور",
-    "icon": "assets/icons/report.svg",
+    "icon": AppIcons.report,
   },
   {
     "text": "نظام دليل ستارز",
-    "icon": "assets/icons/star_outline.svg",
+    "icon": AppIcons.starOutline,
   },
   {
     "text": "اختيار اللغة",
-    "icon": "assets/icons/translate.svg",
+    "icon": AppIcons.translate,
   },
   {
     "text": "الوضع المظلم",
-    "icon": "assets/icons/night.svg",
+    "icon": AppIcons.night,
   },
   {
     "text": "الإعدادات",
-    "icon": "assets/icons/setting.svg",
+    "icon": AppIcons.setting,
   },
   {
     "text": "الدعم الفني",
-    "icon": "assets/icons/info.svg",
+    "icon": AppIcons.info,
   },
 ];

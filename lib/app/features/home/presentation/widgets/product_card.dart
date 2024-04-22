@@ -1,9 +1,4 @@
-import 'package:daleel_store/app/core/constants/colors.dart';
-import 'package:daleel_store/app/core/constants/spaces.dart';
-import 'package:daleel_store/app/core/utils/svg_icon.dart';
-import 'package:daleel_store/app/features/home/domin/models/product_model.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
+import 'package:daleel_store/app/core/utils/exports.dart';
 
 class ProductCard extends StatefulWidget {
   const ProductCard({
@@ -72,7 +67,7 @@ class _ProductCardState extends State<ProductCard> {
                 height: 16,
                 width: 16,
                 child: Image.asset(
-                  "assets/images/saudi-arabia.png",
+                  AppImages.saudiArabia,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -113,10 +108,11 @@ class _ProductCardState extends State<ProductCard> {
                           color: Colors.white,
                         ),
                       ),
+                      AppSpaces.width4,
                       IconSvg(
-                        "assets/icons/star.svg",
+                        AppIcons.star,
                         color: AppColors.light,
-                        size: 16,
+                        size: 12,
                       )
                     ],
                   ),
@@ -208,7 +204,7 @@ class _ProductCardState extends State<ProductCard> {
                                           ),
                                         ).animate().slideY(begin: 0.5)
                                       : const IconSvg(
-                                          "assets/icons/cart.svg",
+                                          AppIcons.cart,
                                           color: AppColors.light,
                                         ).animate().slideY(
                                           begin: -0.4,
@@ -233,7 +229,7 @@ class _ProductCardState extends State<ProductCard> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 IconSvg(
-                                  "assets/icons/apple.svg",
+                                  AppIcons.apple,
                                   color: AppColors.light,
                                   size: 14,
                                 ),

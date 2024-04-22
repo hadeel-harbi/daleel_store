@@ -1,4 +1,5 @@
 import 'package:daleel_store/app/core/constants/colors.dart';
+import 'package:daleel_store/app/core/constants/icons.dart';
 import 'package:daleel_store/app/core/utils/svg_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -51,13 +52,15 @@ class _LightDarkSwitchState extends State<LightDarkSwitch> {
                       color: AppColors.light,
                     ),
                     child: const IconSvg(
-                      "assets/icons/night.svg",
+                      AppIcons.night,
                     ),
                   )
                       .animate()
                       .fadeIn()
-                      .rotate(duration: const Duration(milliseconds: 600))
-                      .slideX(begin: -1),
+                      .rotate(duration: const Duration(milliseconds: 300))
+                      .slideX(
+                          begin: -1,
+                          duration: const Duration(milliseconds: 300)),
                 )
               : Align(
                   alignment: Alignment.centerLeft,
@@ -70,7 +73,7 @@ class _LightDarkSwitchState extends State<LightDarkSwitch> {
                       color: AppColors.light,
                     ),
                     child: const IconSvg(
-                      "assets/icons/sun.svg",
+                      AppIcons.sun,
                     ),
                   )
                       .animate()

@@ -1,9 +1,5 @@
 import 'dart:ui';
-import 'package:daleel_store/app/core/constants/colors.dart';
-import 'package:daleel_store/app/core/constants/spaces.dart';
-import 'package:daleel_store/app/shared/drawer/data/drawer_items.dart';
-import 'package:daleel_store/app/shared/drawer/widgets/drawer_list_item.dart';
-import 'package:flutter/material.dart';
+import 'package:daleel_store/app/core/utils/exports.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({
@@ -36,7 +32,7 @@ class AppDrawer extends StatelessWidget {
               SizedBox(
                 height: AppSpaces.screenHeight(context) * 0.3,
               ),
-              const DrawerListItem("تسجيل الخروج", "assets/icons/logout.svg")
+              const DrawerListItem("تسجيل الخروج", AppIcons.logout)
             ],
           ),
         ),

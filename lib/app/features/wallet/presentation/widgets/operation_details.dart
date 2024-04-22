@@ -1,4 +1,5 @@
 import 'package:daleel_store/app/core/constants/colors.dart';
+import 'package:daleel_store/app/core/constants/icons.dart';
 import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:daleel_store/app/core/utils/svg_icon.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,7 @@ class OperationDetails extends StatelessWidget {
               : Row(
                   children: [
                     const IconSvg(
-                      "assets/icons/star.svg",
+                      AppIcons.star,
                       color: AppColors.secondaryOrange,
                       size: 14,
                     ),

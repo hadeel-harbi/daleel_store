@@ -1,22 +1,24 @@
+import 'package:daleel_store/app/core/constants/images.dart';
+
 List productList = [
   {
     "name": "بطاقات  \$20 iTunes",
     "price": "34.99 ريال سعودي",
-    "image": "assets/images/iTunes.png",
+    "image": AppImages.iTunes,
   },
   {
     "name": "بطاقات  \$20 iTunes",
     "price": "34.99 ريال سعودي",
-    "image": "assets/images/Playstation.png",
+    "image": AppImages.playstation,
   },
   {
     "name": "بطاقات  \$20 iTunes",
     "price": "34.99 ريال سعودي",
-    "image": "assets/images/Mobile-Legends.png",
+    "image": AppImages.mobileLegends,
   },
   {
     "name": "بطاقات  \$20 iTunes",
     "price": "34.99 ريال سعودي",
-    "image": "assets/images/LUDO.png",
+    "image": AppImages.ludo,
   },
 ];

@@ -1,13 +1,4 @@
-import 'package:daleel_store/app/core/constants/colors.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/title_row.dart';
-import 'package:daleel_store/app/features/wallet/domin/models/operation_model.dart';
-import 'package:daleel_store/app/features/wallet/domin/repositories/operations_repository.dart';
-import 'package:daleel_store/app/features/wallet/presentation/widgets/background_container.dart';
-import 'package:daleel_store/app/features/wallet/presentation/widgets/balance_card.dart';
-import 'package:daleel_store/app/features/wallet/presentation/widgets/operation_card.dart';
-import 'package:daleel_store/app/features/wallet/presentation/widgets/wallet_header.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
+import 'package:daleel_store/app/core/utils/exports.dart';
 
 class WalletView extends StatefulWidget {
   const WalletView({super.key});

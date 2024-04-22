@@ -1,4 +1,6 @@
 import 'package:daleel_store/app/core/constants/colors.dart';
+import 'package:daleel_store/app/core/constants/icons.dart';
+import 'package:daleel_store/app/core/constants/images.dart';
 import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:daleel_store/app/core/utils/svg_icon.dart';
 import 'package:daleel_store/app/features/home/presentation/widgets/icon_with_badge.dart';
@@ -21,7 +23,7 @@ class Header extends StatelessWidget {
               InkWell(
                 onTap: () => drawerKey.currentState!.openDrawer(),
                 child: const IconSvg(
-                  "assets/icons/menu.svg",
+                  AppIcons.menu,
                   size: 14,
                 ),
               ),
@@ -33,7 +35,7 @@ class Header extends StatelessWidget {
                     decoration: const BoxDecoration(
                         color: AppColors.primary, shape: BoxShape.circle),
                     child: Image.asset(
-                      "assets/images/person.png",
+                      AppImages.person,
                       height: 36,
                       width: 36,
                       fit: BoxFit.contain,
@@ -56,7 +58,7 @@ class Header extends StatelessWidget {
               Row(
                 children: [
                   const IconSvg(
-                    "assets/icons/wallet.svg",
+                    AppIcons.wallet,
                     color: AppColors.secondaryGreen,
                     size: 20,
                   ),
@@ -74,7 +76,7 @@ class Header extends StatelessWidget {
               Row(
                 children: [
                   const IconSvg(
-                    "assets/icons/star.svg",
+                    AppIcons.star,
                     color: AppColors.secondaryOrange,
                     size: 16,
                   ),
@@ -90,13 +92,13 @@ class Header extends StatelessWidget {
               ),
               const Spacer(),
               const IconWithBadge(
-                icon: "assets/icons/alart.svg",
+                icon: AppIcons.alart,
                 color: AppColors.primary,
                 badgeCount: 1,
               ),
               AppSpaces.width16,
               const IconWithBadge(
-                icon: "assets/icons/cart.svg",
+                icon: AppIcons.cart,
                 color: AppColors.secondaryRed,
                 badgeCount: 2,
               ),

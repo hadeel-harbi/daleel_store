@@ -1,9 +1,4 @@
-import 'package:daleel_store/app/core/constants/colors.dart';
-import 'package:daleel_store/app/core/constants/spaces.dart';
-import 'package:daleel_store/app/core/utils/svg_icon.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/icon_with_badge.dart';
-import 'package:daleel_store/app/shared/bottom_nav_bar/bottom_nav_bar.dart';
-import 'package:flutter/material.dart';
+import 'package:daleel_store/app/core/utils/exports.dart';
 
 class WalletHeader extends StatelessWidget {
   const WalletHeader({
@@ -17,7 +12,7 @@ class WalletHeader extends StatelessWidget {
         InkWell(
           onTap: () => drawerKey.currentState!.openDrawer(),
           child: const IconSvg(
-            "assets/icons/menu.svg",
+            AppIcons.menu,
             size: 14,
             color: AppColors.light,
           ),
@@ -30,7 +25,7 @@ class WalletHeader extends StatelessWidget {
               decoration: const BoxDecoration(
                   color: AppColors.primary, shape: BoxShape.circle),
               child: Image.asset(
-                "assets/images/person.png",
+                AppImages.person,
                 height: 36,
                 width: 36,
                 fit: BoxFit.contain,
@@ -47,13 +42,13 @@ class WalletHeader extends StatelessWidget {
         ),
         const Spacer(),
         const IconWithBadge(
-          icon: "assets/icons/alart.svg",
+          icon: AppIcons.alart,
           color: AppColors.secondaryGreen,
           badgeCount: 0,
         ),
         AppSpaces.width16,
         const IconWithBadge(
-          icon: "assets/icons/cart.svg",
+          icon: AppIcons.cart,
           color: AppColors.secondaryGreen,
           badgeCount: 0,
         ),

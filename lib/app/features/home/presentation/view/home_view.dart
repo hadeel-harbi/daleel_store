@@ -1,20 +1,4 @@
-import 'package:daleel_store/app/core/constants/colors.dart';
-import 'package:daleel_store/app/core/constants/spaces.dart';
-import 'package:daleel_store/app/core/utils/svg_icon.dart';
-import 'package:daleel_store/app/features/home/domin/models/product_model.dart';
-import 'package:daleel_store/app/features/home/domin/repositories/products_repository.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/home_view_background.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/partners_list_view.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/stores_list_view.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/categories_row.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/header.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/images_slider.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/item_container.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/products_list_view.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/text_field.dart';
-import 'package:daleel_store/app/features/home/presentation/widgets/title_row.dart';
-import 'package:daleel_store/app/shared/shared_widgets/view_padding.dart';
-import 'package:flutter/material.dart';
+import 'package:daleel_store/app/core/utils/exports.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -40,8 +24,8 @@ class _HomeViewState extends State<HomeView> {
             Header(),
             TextFieldWidget(
               hint: "بطاقة يلا لودو",
-              suffixIcon: IconSvg("assets/icons/search.svg",
-                  color: AppColors.dark, size: 16),
+              suffixIcon:
+                  IconSvg(AppIcons.search, color: AppColors.dark, size: 16),
             ),
             TitleRow(headline: "تصنيفات المنتجات"),
           ]),
@@ -53,10 +37,10 @@ class _HomeViewState extends State<HomeView> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ItemContainer(
-                  image: "assets/images/Mobile-Legends.png",
+                  image: AppImages.mobileLegends,
                 ),
                 ItemContainer(
-                  image: "assets/images/PUBG.png",
+                  image: AppImages.pubg,
                 )
               ],
             ),
