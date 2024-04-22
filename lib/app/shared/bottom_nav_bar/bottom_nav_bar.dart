@@ -1,4 +1,5 @@
 import 'package:daleel_store/app/features/home/presentation/view/home_view.dart';
+import 'package:daleel_store/app/features/wallet/presentation/view/wallet_view.dart';
 import 'package:daleel_store/app/shared/bottom_nav_bar/cubit/navbar_cubit.dart';
 import 'package:daleel_store/app/shared/bottom_nav_bar/widgets/dot_bottom_nav_bar.dart';
 import 'package:daleel_store/app/shared/drawer/app_drawer.dart';
@@ -18,7 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   List<Widget> views = [
     const HomeView(),
     const HomeView(),
-    const HomeView(),
+    const WalletView(),
     const HomeView(),
     const HomeView(),
   ];
