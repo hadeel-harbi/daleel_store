@@ -11,13 +11,7 @@ class TextHeadline extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.centerRight,
-      child: Text(
-        text,
-        style: Theme.of(context)
-            .textTheme
-            .headlineMedium
-            ?.copyWith(fontWeight: FontWeight.w700),
-      ),
+      child: Text(text, style: Theme.of(context).textTheme.headlineMedium),
     );
   }
 }

@@ -43,13 +43,8 @@ class Header extends StatelessWidget {
                   ),
                 ),
               ),
-              Text(
-                "خالد عليان",
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineMedium
-                    ?.copyWith(fontWeight: FontWeight.w700),
-              )
+              Text("خالد عليان",
+                  style: Theme.of(context).textTheme.headlineMedium)
             ],
           ),
           AppSpaces.height8,

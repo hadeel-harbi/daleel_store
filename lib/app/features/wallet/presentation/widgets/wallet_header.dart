@@ -38,7 +38,7 @@ class WalletHeader extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headlineMedium
-              ?.copyWith(color: AppColors.light, fontWeight: FontWeight.w700),
+              ?.copyWith(color: AppColors.light),
         ),
         const Spacer(),
         const IconWithBadge(

@@ -17,4 +17,9 @@ class AppImages {
   static const String shop1 = "assets/images/shop-logo-1.png";
   static const String shop2 = "assets/images/shop-logo-2.png";
   static const String ufea = "assets/images/UEFA.png";
+  static const String mobile1 = "assets/images/mobile1.png";
+  static const String mobile2 = "assets/images/mobile2.png";
+  static const String vector1 = "assets/images/vector1.png";
+  static const String vector2 = "assets/images/vector2.png";
+  static const String vector3 = "assets/images/vector3.png";
 }

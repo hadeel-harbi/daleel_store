@@ -1,6 +1,7 @@
 import 'package:daleel_store/app/core/constants/text_style.dart';
 import 'package:daleel_store/app/features/home/presentation/cubit/slider_cubit.dart';
-import 'package:daleel_store/app/shared/bottom_nav_bar/bottom_nav_bar.dart';
+import 'package:daleel_store/app/features/onboarding/presentation/cubit/onboaring_cubit.dart';
+import 'package:daleel_store/app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:daleel_store/app/shared/bottom_nav_bar/cubit/navbar_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,6 +23,9 @@ class MainApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => SliderCubit(),
+        ),
+        BlocProvider(
+          create: (context) => OnboaringCubit(),
         )
       ],
       child: MaterialApp(
@@ -40,7 +44,7 @@ class MainApp extends StatelessWidget {
           fontFamily: "IBM Plex",
           textTheme: AppTextTheme.textTheme,
         ),
-        home: const BottomNavBar(),
+        home: const OnboardingView(),
       ),
     );
   }

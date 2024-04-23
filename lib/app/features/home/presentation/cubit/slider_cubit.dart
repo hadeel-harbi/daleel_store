@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 part 'slider_state.dart';
 
 class SliderCubit extends Cubit<SliderState> {
-  SliderCubit() : super(NavbarInitial());
+  SliderCubit() : super(InitialState());
 
   static SliderCubit get(context) => BlocProvider.of(context);
 

@@ -24,14 +24,13 @@ class ImagesSlider extends StatelessWidget {
           ),
         ),
         SmoothPageIndicator(
-            controller: cubit.controller, // PageController
+            controller: cubit.controller,
             count: 4,
             effect: ExpandingDotsEffect(
                 dotWidth: 8,
                 dotHeight: 8,
                 activeDotColor: AppColors.primary,
-                dotColor: AppColors.primary
-                    .withOpacity(0.3)), // your preferred effect
+                dotColor: AppColors.primary.withOpacity(0.3)),
             onDotClicked: (index) {}),
       ],
     );

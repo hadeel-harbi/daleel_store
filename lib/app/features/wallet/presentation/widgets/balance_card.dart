@@ -61,7 +61,7 @@ class BalanceCard extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  IconSvg(
+                  const IconSvg(
                     AppIcons.addCircle,
                     color: AppColors.light,
                     size: 20,
