@@ -1,11 +1,6 @@
-import 'package:daleel_store/app/core/constants/text_style.dart';
-import 'package:daleel_store/app/features/home/presentation/cubit/slider_cubit.dart';
-import 'package:daleel_store/app/features/onboarding/presentation/cubit/onboaring_cubit.dart';
-import 'package:daleel_store/app/features/onboarding/presentation/view/onboarding_view.dart';
-import 'package:daleel_store/app/shared/bottom_nav_bar/cubit/navbar_cubit.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:daleel_store/app/core/utils/exports.dart';
 
 void main() {
   runApp(const MainApp());

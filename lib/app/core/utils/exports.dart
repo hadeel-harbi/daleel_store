@@ -34,3 +34,12 @@ export 'package:daleel_store/app/shared/bottom_nav_bar/widgets/dot_bottom_nav_ba
 export 'package:daleel_store/app/shared/drawer/app_drawer.dart';
 export 'package:daleel_store/app/shared/drawer/data/drawer_items.dart';
 export 'package:daleel_store/app/shared/drawer/widgets/drawer_list_item.dart';
+export 'package:daleel_store/app/core/constants/text_style.dart';
+export 'package:daleel_store/app/features/home/presentation/cubit/slider_cubit.dart';
+export 'package:daleel_store/app/features/onboarding/presentation/cubit/onboaring_cubit.dart';
+export 'package:daleel_store/app/features/onboarding/presentation/view/onboarding_view.dart';
+export 'package:daleel_store/app/features/onboarding/presentation/widgets/background_images.dart';
+export 'package:daleel_store/app/features/onboarding/presentation/widgets/onboarding_first.dart';
+export 'package:daleel_store/app/features/onboarding/presentation/widgets/onboarding_second.dart';
+export 'package:daleel_store/app/features/onboarding/presentation/widgets/onboarding_texts.dart';
+export 'package:daleel_store/app/features/onboarding/presentation/widgets/swipe_button.dart';

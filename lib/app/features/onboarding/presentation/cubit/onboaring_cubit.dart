@@ -1,5 +1,4 @@
 import 'package:daleel_store/app/core/utils/exports.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'onboaring_state.dart';
@@ -12,9 +11,9 @@ class OnboaringCubit extends Cubit<OnboaringState> {
   int currentIndex = 0;
 
   double get currentOffset {
-    bool inited = pageController.hasClients &&
+    bool initiated = pageController.hasClients &&
         pageController.position.hasContentDimensions;
-    return inited ? pageController.page! : pageController.initialPage * 1.0;
+    return initiated ? pageController.page! : pageController.initialPage * 1.0;
   }
 
   void changeIndex(int index) {
@@ -25,8 +24,8 @@ class OnboaringCubit extends Cubit<OnboaringState> {
 
   void nextPage(BuildContext context) {
     if (currentIndex == 1) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => const HomeView()));
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const BottomNavBar()));
     } else {
       pageController.nextPage(
           duration: const Duration(milliseconds: 400), curve: Curves.ease);

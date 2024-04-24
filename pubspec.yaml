@@ -15,6 +15,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.10+1
+  horizontal_blocked_scroll_physics: ^4.0.1
   intl: any
   smooth_page_indicator: ^1.1.0
 
