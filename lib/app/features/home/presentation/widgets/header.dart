@@ -15,34 +15,36 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 24),
+      padding: const EdgeInsets.symmetric(vertical: 16),
       child: Column(
         children: [
           Row(
             children: [
               InkWell(
                 onTap: () => drawerKey.currentState!.openDrawer(),
-                child: const IconSvg(
-                  AppIcons.menu,
-                  size: 14,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: ClipOval(
-                  clipBehavior: Clip.antiAlias,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                        color: AppColors.primary, shape: BoxShape.circle),
-                    child: Image.asset(
-                      AppImages.person,
-                      height: 36,
-                      width: 36,
-                      fit: BoxFit.contain,
-                    ),
+                child: const Padding(
+                  padding:
+                      EdgeInsetsDirectional.only(top: 12, bottom: 12, end: 8),
+                  child: IconSvg(
+                    AppIcons.menu,
+                    size: 14,
                   ),
                 ),
               ),
+              ClipOval(
+                clipBehavior: Clip.antiAlias,
+                child: Container(
+                  decoration: const BoxDecoration(
+                      color: AppColors.primary, shape: BoxShape.circle),
+                  child: Image.asset(
+                    AppImages.person,
+                    height: 36,
+                    width: 36,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              AppSpaces.width8,
               Text("خالد عليان",
                   style: Theme.of(context).textTheme.headlineMedium)
             ],

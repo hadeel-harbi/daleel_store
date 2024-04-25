@@ -156,7 +156,7 @@ class _ProductCardState extends State<ProductCard> {
                               duration: const Duration(milliseconds: 300),
                               height: 32,
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 12, vertical: 6),
+                                  horizontal: 8, vertical: 4),
                               decoration: BoxDecoration(
                                   color: inCart
                                       ? AppColors.light
@@ -168,23 +168,26 @@ class _ProductCardState extends State<ProductCard> {
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   inCart
-                                      ? const Text(
+                                      ? Text(
                                           "في السلة",
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                            color: AppColors.secondaryRed,
-                                          ),
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyMedium
+                                              ?.copyWith(
+                                                  color: AppColors.secondaryRed,
+                                                  fontWeight: FontWeight.w600),
                                         ).animate().fadeIn()
-                                      : const Text(
+                                      : Text(
                                           "أضف للسلة",
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                            color: AppColors.light,
-                                          ),
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyMedium
+                                              ?.copyWith(
+                                                  color: AppColors.light,
+                                                  fontWeight: FontWeight.w600),
                                         ).animate().fadeIn(
                                           delay: const Duration(
                                               milliseconds: 100)),
@@ -202,14 +205,21 @@ class _ProductCardState extends State<ProductCard> {
                                             color: Colors.white,
                                             size: 11,
                                           ),
-                                        ).animate().slideY(begin: 0.5)
+                                        ).animate().slideY(
+                                            begin: 0.5,
+                                            duration: const Duration(
+                                                milliseconds: 200),
+                                          )
                                       : const IconSvg(
                                           AppIcons.cart,
                                           color: AppColors.light,
+                                          size: 18,
                                         ).animate().slideY(
                                           begin: -0.4,
+                                          duration:
+                                              const Duration(milliseconds: 200),
                                           delay:
-                                              const Duration(milliseconds: 100))
+                                              const Duration(milliseconds: 20))
                                 ],
                               ),
                             ),
@@ -221,25 +231,26 @@ class _ProductCardState extends State<ProductCard> {
                           child: Container(
                             height: 32,
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 16, vertical: 6),
+                                horizontal: 10, vertical: 4),
                             decoration: BoxDecoration(
                                 color: AppColors.black,
                                 borderRadius: BorderRadius.circular(17)),
-                            child: const Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                IconSvg(
-                                  AppIcons.apple,
-                                  color: AppColors.light,
-                                  size: 14,
-                                ),
                                 Text(
                                   "Pay",
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyMedium
+                                      ?.copyWith(
+                                          color: AppColors.light,
+                                          fontWeight: FontWeight.w600),
+                                ),
+                                const IconSvg(
+                                  AppIcons.apple,
+                                  color: AppColors.light,
+                                  size: 16,
                                 ),
                               ],
                             ),

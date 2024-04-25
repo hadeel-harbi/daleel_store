@@ -49,11 +49,13 @@ class _OperationCardState extends State<OperationCard> {
                           ? AppColors.secondaryRed
                           : AppColors.secondaryGreen,
                       shape: BoxShape.circle),
-                  child: IconSvg(
-                    widget.operation.type == "outcome"
-                        ? AppIcons.outcome
-                        : AppIcons.income,
-                    color: AppColors.light,
+                  child: Center(
+                    child: IconSvg(
+                      widget.operation.type == "outcome"
+                          ? AppIcons.outcome
+                          : AppIcons.income,
+                      color: AppColors.light,
+                    ),
                   ),
                 ),
                 SizedBox(

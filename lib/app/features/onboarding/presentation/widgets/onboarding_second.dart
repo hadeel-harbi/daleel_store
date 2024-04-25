@@ -45,11 +45,16 @@ class OnboardingSecond extends StatelessWidget {
           ),
         ),
         Positioned(
-            top: 60,
-            child: Container(
-                alignment: Alignment.center,
-                width: AppSpaces.screenWidth(context),
-                child: Image.asset(AppImages.daleelLogo)))
+          top: 50,
+          child: Container(
+            alignment: Alignment.center,
+            width: AppSpaces.screenWidth(context),
+            child: Image.asset(
+              AppImages.daleelLogo,
+              width: 45,
+            ),
+          ),
+        )
       ],
     );
   }

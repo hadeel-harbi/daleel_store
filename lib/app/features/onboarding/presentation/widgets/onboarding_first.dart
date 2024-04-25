@@ -53,9 +53,9 @@ class OnboardingFirst extends StatelessWidget {
                           duration: const Duration(milliseconds: 50),
                           turns: cubit.currentOffset * 0.09,
                           child: const ShopCard(
-                            logo: "assets/logo/P.png",
+                            logo: "assets/logo/playstation.png",
                             color: Color(0xffED1736),
-                            padding: 10,
+                            padding: 18,
                           ),
                         ),
                       );
@@ -67,7 +67,7 @@ class OnboardingFirst extends StatelessWidget {
               top: 100,
               child: Image.asset(
                 AppImages.mobile1,
-                width: 400,
+                width: 350,
               ),
             ),
             PositionedDirectional(
@@ -128,7 +128,7 @@ class OnboardingFirst extends StatelessWidget {
                 width: AppSpaces.screenWidth(context),
                 child: Image.asset(
                   AppImages.daleelLogo,
-                  width: 50,
+                  width: 45,
                 ),
               ),
             )
