@@ -61,69 +61,74 @@ class BalanceCard extends StatelessWidget {
                 ? MainAxisAlignment.spaceEvenly
                 : MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                children: [
-                  const IconSvg(
-                    AppIcons.addCircle,
-                    color: AppColors.light,
-                    size: 20,
-                  ),
-                  AppSpaces.height8,
-                  Text(
-                    "إضافة أموال",
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: AppColors.light, fontWeight: FontWeight.w600),
-                  ),
-                ],
+            children: const [
+              BalanceButton(
+                icon: AppIcons.addCircle,
+                text: "إضافة أموال",
               ),
-              Container(
-                width: 1,
-                height: 25,
-                color: AppColors.light,
+              VertDivider(),
+              BalanceButton(
+                icon: AppIcons.gift,
+                text: "إهداء أموال",
               ),
-              Column(
-                children: [
-                  const IconSvg(
-                    AppIcons.gift,
-                    color: AppColors.light,
-                    size: 20,
-                  ),
-                  AppSpaces.height8,
-                  Text(
-                    "إهداء أموال",
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: AppColors.light, fontWeight: FontWeight.w600),
-                  ),
-                ],
+              VertDivider(),
+              BalanceButton(
+                icon: AppIcons.income,
+                text: "طلب أموال",
               ),
-              Align(
-                alignment: Alignment.topCenter,
-                child: Container(
-                  width: 1,
-                  height: 25,
-                  color: AppColors.light,
-                ),
-              ),
-              Column(
-                children: [
-                  const IconSvg(
-                    AppIcons.income,
-                    color: AppColors.light,
-                    size: 20,
-                  ),
-                  AppSpaces.height8,
-                  Text(
-                    "طلب أموال",
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: AppColors.light, fontWeight: FontWeight.w600),
-                  ),
-                ],
-              )
             ],
           )
         ],
       ),
+    );
+  }
+}
+
+class VertDivider extends StatelessWidget {
+  const VertDivider({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.topCenter,
+      child: Container(
+        width: 1,
+        height: 25,
+        color: AppColors.light,
+      ),
+    );
+  }
+}
+
+class BalanceButton extends StatelessWidget {
+  const BalanceButton({
+    super.key,
+    required this.text,
+    required this.icon,
+  });
+  final String text;
+  final String icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        IconSvg(
+          icon,
+          color: AppColors.light,
+          size: 20,
+        ),
+        AppSpaces.height8,
+        Text(
+          text,
+          style: Theme.of(context)
+              .textTheme
+              .bodySmall
+              ?.copyWith(color: AppColors.light, fontWeight: FontWeight.w600),
+        ),
+      ],
     );
   }
 }

@@ -18,9 +18,15 @@ class OnboardingSecond extends StatelessWidget {
         children: [
           Positioned(
             top: 70,
-            child: Image.asset(
-              AppImages.mobile2,
-              width: 390,
+            child: SizedBox(
+              width: DeviceUtils.isLargeDevices(context)
+                  ? 390
+                  : DeviceUtils.screenWidth(context) * 0.95,
+              height: DeviceUtils.screenHeight(context) * 0.65,
+              child: Image.asset(
+                AppImages.mobile2,
+                fit: BoxFit.contain,
+              ),
             ),
           ),
           Positioned(

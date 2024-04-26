@@ -23,7 +23,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   Widget build(BuildContext context) {
     return BlocBuilder<NavbarCubit, NavbarState>(
       builder: (context, state) {
-        var cubit = NavbarCubit.get(context);
+        final cubit = NavbarCubit.get(context);
 
         return Scaffold(
           key: drawerKey,

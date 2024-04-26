@@ -7,7 +7,7 @@ class DeviceUtils {
       MediaQuery.of(context).size.height;
 
   static bool isLargeDevices(BuildContext context) {
-    if (screenWidth(context) > 390) {
+    if (screenWidth(context) >= 390) {
       return true;
     }
     return false;

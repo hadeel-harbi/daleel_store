@@ -98,7 +98,7 @@ class _OnboardingViewState extends State<OnboardingView> {
               ),
               //--------------------------------
               Positioned(
-                bottom: 48,
+                bottom: DeviceUtils.screenHeight(context) * 0.04,
                 child: OnboardingTexts(index: cubit.currentIndex),
               ),
               //----------- Page View -----------

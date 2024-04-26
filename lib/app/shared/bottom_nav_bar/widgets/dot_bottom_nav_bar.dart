@@ -47,7 +47,7 @@ class _DotBottomNavBarState extends State<DotBottomNavBar> {
   Widget build(BuildContext context) {
     List<Widget> navBarItemList = [];
 
-    for (var i = 0; i < _iconList.length; i++) {
+    for (int i = 0; i < _iconList.length; i++) {
       navBarItemList.add(buildNavBarItem(_iconList[i], i, _textList[i]));
     }
 

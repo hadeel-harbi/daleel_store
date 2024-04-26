@@ -11,7 +11,7 @@ class ImagesSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var cubit = SliderCubit.get(context);
+    final cubit = SliderCubit.get(context);
     return Column(
       children: [
         SizedBox(
