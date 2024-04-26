@@ -1,6 +1,6 @@
 import 'package:daleel_store/app/core/constants/colors.dart';
+import 'package:daleel_store/app/core/utils/device_utils.dart';
 import 'package:daleel_store/app/core/constants/icons.dart';
-import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:daleel_store/app/core/utils/svg_icon.dart';
 import 'package:daleel_store/app/features/onboarding/presentation/cubit/onboaring_cubit.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +38,7 @@ class SwipeButton extends StatelessWidget {
         ),
         Container(
           alignment: Alignment.center,
-          width: AppSpaces.screenWidth(context),
+          width: DeviceUtils.screenWidth(context),
           child: Directionality(
             textDirection: TextDirection.ltr,
             child: SmoothPageIndicator(

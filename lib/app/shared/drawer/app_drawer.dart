@@ -14,26 +14,51 @@ class AppDrawer extends StatelessWidget {
         child: Drawer(
           backgroundColor: AppColors.light.withOpacity(0.9),
           elevation: 0,
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 54, bottom: 16),
-                child: ListTile(
-                  title: Text(
-                    'القائمة الرئيسية',
-                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        color: AppColors.primary, fontWeight: FontWeight.w700),
+          child: SizedBox(
+            height: DeviceUtils.screenHeight(context),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  child: ListView(
+                    padding: EdgeInsets.zero,
+                    shrinkWrap: true,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 54, bottom: 16),
+                        child: ListTile(
+                          title: Text(
+                            'القائمة الرئيسية',
+                            style: Theme.of(context)
+                                .textTheme
+                                .headlineSmall
+                                ?.copyWith(
+                                    color: AppColors.primary,
+                                    fontWeight: FontWeight.w700),
+                          ),
+                        ),
+                      ),
+                      for (final item in drawerItems)
+                        DrawerListItem(item["text"], item["icon"]),
+                      DeviceUtils.isLandscapeOrientation(context)
+                          ? const DrawerListItem(
+                              "تسجيل الخروج", AppIcons.logout)
+                          : const SizedBox.shrink(),
+                    ],
                   ),
                 ),
-              ),
-              for (final item in drawerItems)
-                DrawerListItem(item["text"], item["icon"]),
-              SizedBox(
-                height: AppSpaces.screenHeight(context) * 0.3,
-              ),
-              const DrawerListItem("تسجيل الخروج", AppIcons.logout)
-            ],
+                DeviceUtils.isPortraitOrientation(context)
+                    ? const Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Padding(
+                          padding: EdgeInsets.only(bottom: 24),
+                          child:
+                              DrawerListItem("تسجيل الخروج", AppIcons.logout),
+                        ),
+                      )
+                    : const SizedBox.shrink()
+              ],
+            ),
           ),
         ),
       ),

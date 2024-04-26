@@ -23,7 +23,7 @@ class _OperationCardState extends State<OperationCard> {
         });
       },
       child: Container(
-        width: AppSpaces.screenWidth(context),
+        width: DeviceUtils.screenWidth(context) * 0.5,
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
         decoration: BoxDecoration(
           color: AppColors.light,
@@ -59,7 +59,7 @@ class _OperationCardState extends State<OperationCard> {
                   ),
                 ),
                 SizedBox(
-                  width: AppSpaces.screenWidth(context) * 0.45,
+                  width: DeviceUtils.screenWidth(context) * 0.45,
                   child: Text(
                     widget.operation.name ?? "",
                     overflow: TextOverflow.ellipsis,

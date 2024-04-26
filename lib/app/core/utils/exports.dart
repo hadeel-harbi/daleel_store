@@ -43,3 +43,4 @@ export 'package:daleel_store/app/features/onboarding/presentation/widgets/onboar
 export 'package:daleel_store/app/features/onboarding/presentation/widgets/onboarding_second.dart';
 export 'package:daleel_store/app/features/onboarding/presentation/widgets/onboarding_texts.dart';
 export 'package:daleel_store/app/features/onboarding/presentation/widgets/swipe_button.dart';
+export 'package:daleel_store/app/core/utils/device_utils.dart';

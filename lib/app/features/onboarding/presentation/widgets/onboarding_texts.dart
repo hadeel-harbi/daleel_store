@@ -1,3 +1,4 @@
+import 'package:daleel_store/app/core/utils/device_utils.dart';
 import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -15,7 +16,7 @@ class OnboardingTexts extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          width: AppSpaces.screenWidth(context),
+          width: DeviceUtils.screenWidth(context),
         ),
         index == 0
             ? Text(
@@ -28,7 +29,7 @@ class OnboardingTexts extends StatelessWidget {
               ).animate().fadeIn(delay: const Duration(milliseconds: 20)),
         AppSpaces.height8,
         SizedBox(
-          width: AppSpaces.screenWidth(context) - 70,
+          width: DeviceUtils.screenWidth(context) - 70,
           child: Text(
             "الوجهة الأولى والأسرع لشراء البطاقات الرقمية، مئات العلامات التجارية المحلية والعالمية وأفضل سوق للبطاقات الرقمية للاعبين في الشرق الأوسط",
             textAlign: TextAlign.center,

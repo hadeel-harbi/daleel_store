@@ -60,8 +60,14 @@ class _WalletViewState extends State<WalletView> {
                       )
                     else
                       ListView.separated(
-                        padding: const EdgeInsets.only(
-                            bottom: 120, right: 24, left: 24),
+                        padding: EdgeInsets.only(
+                            bottom: 120,
+                            right: DeviceUtils.isPortraitOrientation(context)
+                                ? 24
+                                : 56,
+                            left: DeviceUtils.isPortraitOrientation(context)
+                                ? 24
+                                : 56),
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: operations.length,

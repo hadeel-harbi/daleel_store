@@ -36,6 +36,14 @@ class CategoriesRow extends StatelessWidget {
               icon: AppIcons.data,
               text: "الاتصال والبيانات",
             ),
+            CategoryWidget(
+              icon: AppIcons.shopping,
+              text: "التسوق",
+            ),
+            CategoryWidget(
+              icon: AppIcons.data,
+              text: "الاتصال والبيانات",
+            ),
           ],
         ),
       ),

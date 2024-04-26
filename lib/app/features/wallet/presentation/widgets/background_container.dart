@@ -1,5 +1,5 @@
 import 'package:daleel_store/app/core/constants/colors.dart';
-import 'package:daleel_store/app/core/constants/spaces.dart';
+import 'package:daleel_store/app/core/utils/device_utils.dart';
 import 'package:flutter/material.dart';
 
 class BackgroundContainer extends StatelessWidget {
@@ -13,9 +13,9 @@ class BackgroundContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSpaces.screenWidth(context),
+      width: DeviceUtils.screenWidth(context),
       constraints:
-          BoxConstraints(minHeight: AppSpaces.screenHeight(context) * 0.6),
+          BoxConstraints(minHeight: DeviceUtils.screenHeight(context) * 0.6),
       padding: const EdgeInsets.symmetric(vertical: 16),
       decoration: BoxDecoration(
         color: AppColors.light,

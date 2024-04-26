@@ -12,6 +12,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   void initState() {
     products = ProductsRepository().getProducts();
+    DeviceUtils.setAllOrientations();
     super.initState();
   }
 

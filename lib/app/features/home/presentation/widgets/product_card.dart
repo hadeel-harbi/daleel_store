@@ -21,7 +21,7 @@ class _ProductCardState extends State<ProductCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSpaces.screenWidth(context) * 0.6,
+      width: DeviceUtils.screenWidth(context) * 0.6,
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsetsDirectional.only(end: 14),
       constraints: const BoxConstraints(maxWidth: 300),
@@ -42,7 +42,7 @@ class _ProductCardState extends State<ProductCard> {
         children: [
           Container(
             height: 144,
-            width: AppSpaces.screenWidth(context) * 0.55,
+            width: DeviceUtils.screenWidth(context) * 0.55,
             clipBehavior: Clip.antiAlias,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),

@@ -37,7 +37,7 @@ class MainApp extends StatelessWidget {
         locale: const Locale('ar'),
         theme: ThemeData(
           fontFamily: "IBM Plex",
-          textTheme: AppTextTheme.textTheme,
+          textTheme: AppTextTheme.textTheme(context),
         ),
         home: const OnboardingView(),
       ),

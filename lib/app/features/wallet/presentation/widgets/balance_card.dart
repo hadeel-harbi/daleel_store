@@ -1,4 +1,5 @@
 import 'package:daleel_store/app/core/constants/colors.dart';
+import 'package:daleel_store/app/core/utils/device_utils.dart';
 import 'package:daleel_store/app/core/constants/icons.dart';
 import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:daleel_store/app/core/utils/svg_icon.dart';
@@ -12,7 +13,7 @@ class BalanceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSpaces.screenWidth(context) * 0.8,
+      width: DeviceUtils.screenWidth(context) * 0.8,
       height: 184,
       padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
       margin: const EdgeInsets.symmetric(vertical: 30),
@@ -56,7 +57,9 @@ class BalanceCard extends StatelessWidget {
           ),
           AppSpaces.height8,
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: DeviceUtils.screenWidth(context) > 850
+                ? MainAxisAlignment.spaceEvenly
+                : MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Column(

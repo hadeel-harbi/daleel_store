@@ -1,4 +1,5 @@
 import 'package:daleel_store/app/core/constants/colors.dart';
+import 'package:daleel_store/app/core/utils/device_utils.dart';
 import 'package:daleel_store/app/core/constants/spaces.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class PartnerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSpaces.screenWidth(context) * 0.6,
+      width: DeviceUtils.screenWidth(context) * 0.6,
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsetsDirectional.only(end: 14),
       constraints: const BoxConstraints(maxWidth: 300),

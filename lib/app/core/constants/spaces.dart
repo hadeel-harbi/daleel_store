@@ -19,8 +19,4 @@ class AppSpaces {
   static const width32 = SizedBox(width: 32);
   static const width48 = SizedBox(width: 48);
   static const width56 = SizedBox(width: 56);
-
-  static screenWidth(BuildContext context) => MediaQuery.of(context).size.width;
-  static screenHeight(BuildContext context) =>
-      MediaQuery.of(context).size.height;
 }
